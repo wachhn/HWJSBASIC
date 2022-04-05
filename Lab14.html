@@ -9,19 +9,19 @@
 <body>
     
     <script>
-
-       // console.log(evenOdd(50)); 
-        // function evenOdd(num){
-        //     return (num%2 ===0) ? "Even" : "Odd"
-        // }
-
-        let evenOdd = function (num){
-            return (num%2 ===0) ? "Even" : "Odd"
+        function ask(question,yes,no){
+            if(confirm(question)) yes()
+            else no()
         }
 
-        let evenOdd2 =  (num) =>  (num%2 ===0) ? "Even" : "Odd"
+        function showOk(){
+            alert("You agree")
+        }
+        function showCamcel(){
+            alert("you camcale")
+        }
         
-
+        ask("Do you agree?" , showOk ,showCamcel )
     </script>
 </body>
 </html>
